@@ -10,7 +10,7 @@ jobs:
           node-version: "14"
       - run: script/bootstrap
       - name: CI build
-          env:
-            PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
-            PACT_BROKER_TOKEN: ${{ secrets.PACT_BROKER_TOKEN }}
-          run: script/cibuild
+        env:
+          PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
+          PACT_BROKER_TOKEN: ${{ secrets.PACT_BROKER_TOKEN }}
+        run: script/cibuild
